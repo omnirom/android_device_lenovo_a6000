@@ -1,18 +1,18 @@
 # Media
-#PRODUCT_PACKAGES += \
-#    libextmedia_jni \
-#    libOmxAacEnc \
-#    libOmxAmrEnc \
-#    libOmxCore \
-#    libOmxEvrcEnc \
-#    libOmxQcelp13Enc \
-#    libOmxVdec \
-#    libOmxVenc \
-#    libstagefrighthw
+PRODUCT_PACKAGES += \
+    libextmedia_jni \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw
 
 ifneq ($(QCPATH),)
-#PRODUCT_PACKAGES += \
-#    libOmxVdecHevc
+PRODUCT_PACKAGES += \
+    libOmxVdecHevc
 endif
 
 PRODUCT_COPY_FILES += \
