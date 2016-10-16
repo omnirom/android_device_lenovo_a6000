@@ -6,9 +6,6 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf
-
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     av.streaming.offload.enable=true \
