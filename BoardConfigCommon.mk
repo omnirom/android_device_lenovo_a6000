@@ -14,4 +14,4 @@
 # limitations under the License.
 
 # Include board config fragments
-include device/cyanogen/msm8916-common/board/*.mk
+include device/qcom/msm8916-common/board/*.mk
