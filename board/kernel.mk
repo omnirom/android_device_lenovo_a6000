@@ -9,7 +9,6 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 
 ENABLE_CPUSETS := true
 
-TARGET_KERNEL_SOURCE := kernel/google/seed
 ifneq ($(FORCE_32_BIT),true)
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
