@@ -4,4 +4,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.fw.empty_app_percent=50 \
     ro.sys.fw.trim_empty_percent=100 \
     ro.sys.fw.trim_cache_percent=100 \
-    ro.sys.fw.trim_enable_memory=1073741824
+    ro.sys.fw.trim_enable_memory=1073741824 \
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.am.reschedule_service=true \
+    ro.config.max_starting_bg=8

@@ -105,7 +105,6 @@ LOCAL_MODULE:= mm-qcamera-app
 LOCAL_32_BIT_ONLY := true
 include $(BUILD_EXECUTABLE)
 
-ifeq ($(call is-vendor-board-platform,QCOM),true)
 # Build tuning library
 include $(CLEAR_VARS)
 

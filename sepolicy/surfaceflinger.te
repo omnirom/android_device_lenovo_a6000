@@ -2,3 +2,4 @@
 
 allow surfaceflinger vfat:dir search;
 allow surfaceflinger sysfs:file r_file_perms;
+allow surfaceflinger persist_file:dir r_dir_perms;

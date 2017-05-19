@@ -1,0 +1,2 @@
+allow audioserver mpctl_data_file:dir search;
+allow audioserver sysfs:dir { open read };

@@ -15,8 +15,6 @@
 
 FORCE_32_BIT := true
 
-include device/qcom/msm8916-common/BoardConfigCommon.mk
-
 include device/lenovo/a6000/board/*.mk
 
 # inherit from proprietary files
