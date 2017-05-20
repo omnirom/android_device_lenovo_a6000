@@ -64,7 +64,7 @@
     },
     {
         "remote":       "omnirom",
-        "repository":   "android_kernel_lenovo_a6000",
+        "repository":   "android_kernel_lenovo_msm8916",
         "target_path":  "kernel/lenovo/a6000",
         "revision":     "android-7.1"
     }
