@@ -166,8 +166,10 @@ on boot
     chown bluetooth bluetooth /sys/module/hci_uart/parameters/ath_btwrite
     chown system system /sys/module/sco/parameters/disable_esco
     chown bluetooth bluetooth /sys/module/hci_smd/parameters/hcismd_set
+    chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/module/bluetooth_power/parameters/power
     chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
+    chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/class/rfkill/rfkill0/state
     chmod 0660 /proc/bluetooth/sleep/proto
     chown bluetooth bluetooth /dev/ttyHS0
@@ -189,6 +191,10 @@ on boot
     chmod 2770 /dev/socket/qmux_bluetooth
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
+
+    mkdir /persist/misc 0770 system system
+    mkdir /persist/alarm 0770 system system
+    mkdir /persist/bluetooth 0770 bluetooth bluetooth
 
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
@@ -316,12 +322,6 @@ service qmuxd /system/bin/qmuxd
     class main
     user root
     group radio audio bluetooth gps qcom_diag wakelock
-
-service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
-    class core
-    user root
-    group root
-    writepid /dev/cpuset/system-background/tasks
 
 service netmgrd /system/bin/netmgrd
     class main
@@ -461,4 +461,8 @@ service wcnss-service /system/bin/wcnss_service
     class main
     user system
     group system wifi radio
+    oneshot
+
+service qcom-mem /system/bin/sh /system/etc/init.qcom.mem.sh
+    disabled
     oneshot
