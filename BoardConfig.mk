@@ -15,6 +15,8 @@
 
 FORCE_32_BIT := true
 
+TARGET_SPECIFIC_HEADER_PATH := device/lenovo/a6000/include
+
 include device/lenovo/a6000/board/*.mk
 
 # inherit from proprietary files
