@@ -58,10 +58,6 @@ on post-fs-data
     mkdir /data/fdAlbum 0770 camera camera
     mkdir /data/misc/camera 0770 camera camera
 
-    # NFC local data and nfcee xml storage
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
-
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
@@ -122,14 +118,6 @@ on post-fs-data
     mkdir /data/misc/location/gpsone_d 0770 system gps
     mkdir /data/misc/location/quipc 0770 gps system
     mkdir /data/misc/location/gsiff 0770 gps gps
-
-    #Create directory from IMS services
-    mkdir /data/shared 0755
-    chown system system /data/shared
-
-    #Create directory for FOTA
-    mkdir /data/fota 0771
-    chown system system /data/fota
 
     #Create directory for hostapd
     mkdir /data/hostapd 0770 system wifi
@@ -461,8 +449,4 @@ service wcnss-service /system/bin/wcnss_service
     class main
     user system
     group system wifi radio
-    oneshot
-
-service qcom-mem /system/bin/sh /system/etc/init.qcom.mem.sh
-    disabled
     oneshot
