@@ -1,2 +1,3 @@
 # Bionic
+BOARD_LIBCUTILS_NO_STATIC_LIBLOG := true
 MALLOC_SVELTE := true

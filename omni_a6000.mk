@@ -14,7 +14,8 @@
 
 $(call inherit-product, device/lenovo/a6000/full_a6000.mk)
 
-# Inherit some common LineageOS stuff.
+# Inherit some common OmniROm stuff.
+
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # must be before including omni part
