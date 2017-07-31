@@ -27,7 +27,7 @@ LOCAL_C_INCLUDES += $(OMX_CORE_DIR)/qomx_core
 
 ifneq ($(strip $(USE_BIONIC_HEADER)),true)
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-LOCAL_C_INCLUDES += $(call project-path-for,qcom-camera)
+LOCAL_C_INCLUDES += hardware/qcom/camera
 endif
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
